@@ -3,6 +3,7 @@ const chai = require("chai")
 const { deployments, ethers, getNamedAccounts } = require("hardhat")
 const { solidity } = require("ethereum-waffle")
 chai.use(solidity)
+const { developmentChains } = require("../../helper-hardhat-config")
 
 !developmentChains.includes(network.name)
     ? describe.skip
